@@ -2,12 +2,19 @@
   text-align: center;
 }
 
-.PokePokeDetail {
+.PKMDetail {
   text-align: center;
   text-transform: capitalize;
 }
 
 .tile{
+  margin-top: 20px;
   border: 1px #BDBDBD;
   display: inline-block;
+  transition: all .2s ease-in-out;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.tile:hover { 
+  transform: scale(1.1); 
 }

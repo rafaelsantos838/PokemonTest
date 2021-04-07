@@ -33,31 +33,29 @@ class App extends React.Component {
  
   renderDetails = () => {
     if (this.state.Pokemon[0].types.length === 1) {
-      return (        
-        <div key='type' className="PokeDetail">
-          <img key='img' src={this.state.Pokemon[0].sprites.front_default} width='200' height='200' alt ={this.state.Pokemon[0].name} />
-          <h3>
-            Number: {this.state.Pokemon[0].name} <br />
-            Name: {this.state.Pokemon[0].id} <br />
-            Types: {this.state.Pokemon[0].types[0].type.name} <br />
-            Size: {this.state.Pokemon[0].height/10}m <br />
-            Weight: {this.state.Pokemon[0].weight/10}kg <br />
-          </h3>
-        </div>
+      return (  
+          <div key='type' className="tile" >
+              <img key='img' src={this.state.Pokemon[0].sprites.front_default} width='200' height='200' alt ={this.state.Pokemon[0].name} /> <br />
+              <div className="PKMDetail">
+                Number: {this.state.Pokemon[0].id} <br />
+                Name: {this.state.Pokemon[0].name} <br />
+                Types: {this.state.Pokemon[0].types[0].type.name} <br />
+                Size: {this.state.Pokemon[0].height/10}m <br />
+                Weight: {this.state.Pokemon[0].weight/10}kg <br />
+              </div>
+          </div>
       );
     } else {
       return (
-        <div key='types' className="PokeDetail">
-          <div className="tile">
-            <img key='img' src={this.state.Pokemon[0].sprites.front_default} width='200' height='200' alt ={this.state.Pokemon[0].name} />
-          <h3>
-              Number: {this.state.Pokemon[0].id} <br />
-              Name: {this.state.Pokemon[0].name} <br />
-              Types: {this.state.Pokemon[0].types[0].type.name} and {this.state.Pokemon[0].types[1].type.name} <br />
-              Size: {this.state.Pokemon[0].height/10}m <br />
-              Weight: {this.state.Pokemon[0].weight/10}kg <br />
-          </h3>
-          </div>
+        <div key='type' className="tile">
+              <img key='img' src={this.state.Pokemon[0].sprites.front_default} width='200' height='200' alt ={this.state.Pokemon[0].name} />
+              <div className="PKMDetail">
+                Number: {this.state.Pokemon[0].id} <br />
+                Name: {this.state.Pokemon[0].name} <br />
+                Types: {this.state.Pokemon[0].types[0].type.name} and {this.state.Pokemon[0].types[1].type.name} <br />
+                Size: {this.state.Pokemon[0].height/10}m <br />
+                Weight: {this.state.Pokemon[0].weight/10}kg <br />
+              </div>
         </div>  
       );
 
@@ -71,8 +69,8 @@ class App extends React.Component {
     this.getPokemon(); 
   }
 
-
   render(){
+    console.log("1")
     return(
     <div className="App">
       <button onClick={this.randomGenerator}>
@@ -90,11 +88,9 @@ class App extends React.Component {
           {this.state.Pokemon.map((data) => {
             return (this.renderDetails())
           })}
-    </div>
-  
+    </div>  
     );
   }
-
 }
 
 export default App;
