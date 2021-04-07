@@ -72,23 +72,25 @@ class App extends React.Component {
   render(){
     console.log("1")
     return(
-    <div className="App">
-      <button onClick={this.randomGenerator}>
-        Random Pokemon
-      </button>
-      <form onSubmit={this.submitChange} id="create-course-form">
-        <label>
-          <input 
-            type="text"
-            onChange={this.onSearchChange}
-            placeholder="Insert Pokemon Name or Number"
-          />
-        </label>
-      </form>
-          {this.state.Pokemon.map((data) => {
-            return (this.renderDetails())
-          })}
-    </div>  
+      <h1>Hello!
+      </h1>
+    // <div className="App">
+    //   <button onClick={this.randomGenerator}>
+    //     Random Pokemon
+    //   </button>
+    //   <form onSubmit={this.submitChange} id="create-course-form">
+    //     <label>
+    //       <input 
+    //         type="text"
+    //         onChange={this.onSearchChange}
+    //         placeholder="Insert Pokemon Name or Number"
+    //       />
+    //     </label>
+    //   </form>
+    //       {this.state.Pokemon.map((data) => {
+    //         return (this.renderDetails())
+    //       })}
+    // </div>  
     );
   }
 }
