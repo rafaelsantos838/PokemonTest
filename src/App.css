@@ -8,10 +8,11 @@ body {
 }
 
 input {
+  text-align: center;
   padding: 5px;
   background-color: transparent;
   box-sizing: border-box;
-  padding: .5rem 2em;
+  padding: .5rem 4em;
   margin: 1rem;
 }
 
