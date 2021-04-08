@@ -16,6 +16,11 @@ input {
   margin: 1rem;
 }
 
+input:placeholder-shown {
+  color: purple;
+  font-style: italic;
+}
+
 button {
   margin: 1.5rem .5rem .5rem .5rem;
   padding: .5rem 3.5rem;

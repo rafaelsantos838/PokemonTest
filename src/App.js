@@ -102,7 +102,7 @@ class App extends React.Component {
           <input 
             type="text"
             onChange={this.onSearchChange}
-            placeholder="Insert Pokemon Name or Number"
+            placeholder="Pokemon Name or Number"
           />
         </label>
       </form>
