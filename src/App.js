@@ -34,46 +34,50 @@ class App extends React.Component {
  
   renderDetails = () => {
     if (this.state.Pokemon[0].types.length === 1) {
-      return (  
-          <div key='type' className="tile" >
-              <img key='img' src={this.state.Pokemon[0].sprites.front_default} width='200' height='200' alt ={this.state.Pokemon[0].name} /> <br />
+      return (
+        <div key='type' className="Body">
+          <div className="tile" >
+              <img key='img' src={this.state.Pokemon[0].sprites.front_default} alt ={this.state.Pokemon[0].name} />
               <div className="container">
-                <div className="RowDetail1">Number:</div> <div className="RowDetail2">{this.state.Pokemon[0].id}</div>
+                <div className="RowDetail">Number:</div><div className="RowDetail">{this.state.Pokemon[0].id}</div>
               </div>
               <div className="container">
-                <div className="RowDetail1">Name</div> <div className="RowDetail2">{this.state.Pokemon[0].name}</div>
+                <div className="RowDetail">Name:</div><div className="RowDetail">{this.state.Pokemon[0].name}</div>
               </div>
               <div className="container">
-                <div className="RowDetail1">Type:</div> <div className="RowDetail2">{this.state.Pokemon[0].types[0].type.name}</div>
+                <div className="RowDetail">Type:</div><div className="RowDetail">{this.state.Pokemon[0].types[0].type.name}</div>
               </div>
               <div className="container">
-                <div className="RowDetail1">Size:</div> <div className="RowDetail2">{this.state.Pokemon[0].height/10}m</div>
+                <div className="RowDetail">Size:</div><div className="RowDetail">{this.state.Pokemon[0].height/10}m</div>
               </div>
               <div className="container">
-                <div className="RowDetail1">Weight:</div> <div className="RowDetail2">{this.state.Pokemon[0].weight/10}kg</div>
+                <div className="RowDetail">Weight:</div><div className="RowDetail">{this.state.Pokemon[0].weight/10}kg</div>
               </div>
+        </div>  
           </div>
       );
     } else {
       return (
-        <div key='type' className="tile">
-              <img key='img' src={this.state.Pokemon[0].sprites.front_default} width='200' height='200' alt ={this.state.Pokemon[0].name} />
+        <div key='type' className="Body">
+          <div className="tile">
+              <img key='img' src={this.state.Pokemon[0].sprites.front_default} alt ={this.state.Pokemon[0].name} />              
               <div className="container">
-                <div className="RowDetail1">Number:</div> <div className="RowDetail2">{this.state.Pokemon[0].id}</div>
+                <div className="RowDetail">Number: </div><div className="RowDetail">{this.state.Pokemon[0].id}</div>
               </div>
               <div className="container">
-                <div className="RowDetail1">Name:</div> <div className="RowDetail2">{this.state.Pokemon[0].name}</div>
+                <div className="RowDetail">Name: </div><div className="RowDetail">{this.state.Pokemon[0].name}</div>
               </div>
               <div className="container">
-                <div className="RowDetail1">Types:</div> <div className="RowDetail2">{this.state.Pokemon[0].types[0].type.name} and {this.state.Pokemon[0].types[1].type.name}</div>
+                <div className="RowDetail">Types: </div><div className="RowDetail">{this.state.Pokemon[0].types[0].type.name} and {this.state.Pokemon[0].types[1].type.name}</div>
               </div>
               <div className="container">
-                <div className="RowDetail1">Size:</div> <div className="RowDetail2">{this.state.Pokemon[0].height/10}m</div>
+                <div className="RowDetail">Size: </div><div className="RowDetail">{this.state.Pokemon[0].height/10}m</div>
               </div>
               <div className="container">
-                <div className="RowDetail1">Weight:</div> <div className="RowDetail2">{this.state.Pokemon[0].weight/10}kg</div>
+                <div className="RowDetail">Weight: </div><div className="RowDetail">{this.state.Pokemon[0].weight/10}kg</div>
               </div>
-        </div>  
+          </div>  
+        </div>
       );
 
     }
