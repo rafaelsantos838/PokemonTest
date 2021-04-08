@@ -1,10 +1,50 @@
 .App {
-  text-align: center;
+  text-align: center;  
 }
 
-.PKMDetail {
-  text-align: center;
+body {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(233,15,249,1) 0%, rgba(88,144,250,1) 71%, rgba(0,212,255,1) 100%);
+}
+
+input {
+  padding: 5px;
+  background-color: transparent;
+}
+
+button {
+  margin: 5px;
+  padding: 5px;
+  color: black;  
+  text-align: center; 
+  background-color: transparent;   
+  border: 2px solid black;   
+  border-radius: 5px;  
+  text-transform: uppercase;  
+  transition: 0.9s; 
+}
+
+button:hover{
+  background-color: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(88,144,250,1) 71%, rgba(233,15,249,1) 100%);
+  color: white;
+  border: 2px solid white;   
+  transform: scale(1.1);
+}
+
+.container {
   text-transform: capitalize;
+}
+
+.RowDetail1 {
+  text-align: left;
+}
+
+.RowDetail2 {
+  text-align: right;
+}
+
+.RowDetail1, .RowDetail2 {
+  display:inline;
 }
 
 .tile{

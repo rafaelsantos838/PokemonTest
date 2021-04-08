@@ -37,12 +37,20 @@ class App extends React.Component {
       return (  
           <div key='type' className="tile" >
               <img key='img' src={this.state.Pokemon[0].sprites.front_default} width='200' height='200' alt ={this.state.Pokemon[0].name} /> <br />
-              <div className="PKMDetail">
-                Number: {this.state.Pokemon[0].id} <br />
-                Name: {this.state.Pokemon[0].name} <br />
-                Types: {this.state.Pokemon[0].types[0].type.name} <br />
-                Size: {this.state.Pokemon[0].height/10}m <br />
-                Weight: {this.state.Pokemon[0].weight/10}kg <br />
+              <div className="container">
+                <div className="RowDetail1">Number:</div> <div className="RowDetail2">{this.state.Pokemon[0].id}</div>
+              </div>
+              <div className="container">
+                <div className="RowDetail1">Name</div> <div className="RowDetail2">{this.state.Pokemon[0].name}</div>
+              </div>
+              <div className="container">
+                <div className="RowDetail1">Type:</div> <div className="RowDetail2">{this.state.Pokemon[0].types[0].type.name}</div>
+              </div>
+              <div className="container">
+                <div className="RowDetail1">Size:</div> <div className="RowDetail2">{this.state.Pokemon[0].height/10}m</div>
+              </div>
+              <div className="container">
+                <div className="RowDetail1">Weight:</div> <div className="RowDetail2">{this.state.Pokemon[0].weight/10}kg</div>
               </div>
           </div>
       );
@@ -50,12 +58,20 @@ class App extends React.Component {
       return (
         <div key='type' className="tile">
               <img key='img' src={this.state.Pokemon[0].sprites.front_default} width='200' height='200' alt ={this.state.Pokemon[0].name} />
-              <div className="PKMDetail">
-                Number: {this.state.Pokemon[0].id} <br />
-                Name: {this.state.Pokemon[0].name} <br />
-                Types: {this.state.Pokemon[0].types[0].type.name} and {this.state.Pokemon[0].types[1].type.name} <br />
-                Size: {this.state.Pokemon[0].height/10}m <br />
-                Weight: {this.state.Pokemon[0].weight/10}kg <br />
+              <div className="container">
+                <div className="RowDetail1">Number:</div> <div className="RowDetail2">{this.state.Pokemon[0].id}</div>
+              </div>
+              <div className="container">
+                <div className="RowDetail1">Name:</div> <div className="RowDetail2">{this.state.Pokemon[0].name}</div>
+              </div>
+              <div className="container">
+                <div className="RowDetail1">Types:</div> <div className="RowDetail2">{this.state.Pokemon[0].types[0].type.name} and {this.state.Pokemon[0].types[1].type.name}</div>
+              </div>
+              <div className="container">
+                <div className="RowDetail1">Size:</div> <div className="RowDetail2">{this.state.Pokemon[0].height/10}m</div>
+              </div>
+              <div className="container">
+                <div className="RowDetail1">Weight:</div> <div className="RowDetail2">{this.state.Pokemon[0].weight/10}kg</div>
               </div>
         </div>  
       );
@@ -65,7 +81,7 @@ class App extends React.Component {
 
   randomGenerator = async (event) => {
     await this.setState({searchfield: Math.floor(Math.random()* (898-1) + 1)})
-    document.getElementById("create-course-form").reset();
+    document.getElementById("clear-form").reset();
     event.preventDefault();
     this.getPokemon(); 
   }
@@ -77,7 +93,7 @@ class App extends React.Component {
       <button onClick={this.randomGenerator}>
         Random Pokemon
       </button>
-      <form onSubmit={this.submitChange} id="create-course-form">
+      <form onSubmit={this.submitChange} id="clear-form">
         <label>
           <input 
             type="text"
