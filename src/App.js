@@ -27,6 +27,7 @@ class App extends React.Component {
        toNewPoke.push(data);
        this.setState({Pokemon: toNewPoke});
      } catch (error) {
+       alert(`${this.state.searchfield} is not a Pokemon!`)
        console.log('Error!!!', error);
      } 
   } 
