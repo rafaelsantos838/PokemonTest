@@ -41,7 +41,8 @@ button:hover{
   transform: scale(1.05);
 }
 
-.Body {
+.BodyDetails {
+  display: inline-block;
   background-color: rgba(220,220,220,0.7);
 }
 
