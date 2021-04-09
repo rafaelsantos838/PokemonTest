@@ -35,8 +35,8 @@ button {
 }
 
 button:hover{
-  color: white;
-  border: 2px solid white;   
+  color: rgba(233,15,249,.5);
+  border: 2px solid rgba(233,15,249,.5);   
   transform: scale(1.05);
 }
 
